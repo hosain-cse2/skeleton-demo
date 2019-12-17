@@ -1,0 +1,47 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    display: grid;
+    grid-template-rows: repeat(2, 40px) 40px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    justify-items: center;
+}
+
+.container > input[type="text"] {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid white;
+    outline: none;
+    text-align: center;
+}
+
+.container > input[type="button"] {
+    font-size: 18px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: white;
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
